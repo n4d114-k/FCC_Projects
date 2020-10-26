@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Product Landing Page</title>
+    <link rel="shortcut icon" href="https://i.ibb.co/JkdwgXX/web-design.png">
+    <!-- Using styles inside an HTML document is considered bad practice,
+    but this is required to pass all freeCodeCamp tests. You can look at
+    the index.html and style.css file to see the html code and styles separately. -->
+    <style media="screen">
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Roboto', sans-serif;
+        }
+        header {
+          position: fixed;
+          top: 0;
+          display: flex;
+          flex-direction: row;
+          /* margin: 20px 10%; /*it makes the page prettier, but but doesn't pass the tests*/
+          padding-left: 50px;
+          background-color: #f5f5f5;
+          border: 0px solid transparent;
+          border-radius: 40px;
+          z-index: 4;
+        }
+        header .logo {
+          display: flex;
+          align-items: center;
+          font-weight: 700;
+          color: #134E5E;
+          margin-left: 5%;
+        }
+        header .logo img {
+          height: 50px;
+          margin-right: 5px;
+        }
+        header ul {
+          list-style: none;
+          display: flex;
+          margin-left: 5%;
+          width: 30%;
+          justify-content: space-around;
+          font-weight: 700;
+          color: #878787;
+          margin-left: 150px;
+        }
+        header ul li {
+          margin: 0 5px;
+          margin: 0 50px 0 50px;
+        }
+
+        header ul li a {
+          color: #878787;
+          text-decoration: none;
+        }
+
+        header:after {
+          content: '';
+          position: absolute;
+          top: -200px;
+          left: -250px;
+          z-index: -1;
+          width: 300px;
+          height: 300px;
+          border-radius: 300px;
+          border: 20px solid #f5f5f5;
+        }
+
+        .page-top {
+          height: 100px;
+        }
+
+        main {
+          display: flex;
+          align-items: center;
+          margin-left: 10%;
+        }
+        .left_side {
+          width: 40%;
+        }
+        .left_side h1 {
+          font-weight: 700;
+          font-size: 50px;
+          background: #134E5E;
+          background: linear-gradient(to right, #134E5E, #71B280);
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+        .left_side h4 {
+          width: 80%;
+          font-size: 0.9em;
+          font-weight: 500;
+          line-height: 22px;
+          color: #134E5E;
+        }
+        .left_side button {
+          padding: 15px 30px;
+          margin: 20px 10px 0 0;
+        }
+        .left_side .social {
+          margin: 60px 0 0;
+        }
+        .left_side .social button {
+          padding: 10px;
+        }
+        p.show_more {
+          color: #134E5E;
+          display: flex;
+          align-items: center;
+          margin-left: 10%;
+        }
+        p.show_more i {
+          margin-left: 15px;
+          font-size: 40px;
+          color: #134E5E;
+          -webkit-text-stroke: 2px white;
+        }
+        .main_btn {
+          border: none;
+          outline: none;
+          cursor: pointer;
+          background: none;
+          font-weight: 500;
+          color: white;
+          position: relative;
+          background: #134E5E;
+          background: -webkit-linear-gradient(to right, #134E5E, #71B280);
+          background: linear-gradient(to right, #134E5E, #71B280);
+          letter-spacing: 1px;
+          border-radius: 30px;
+        }
+        .main_btn.second {
+          background: #71B280;
+        }
+        .outline_btn {
+          border: 2px solid #71B280;
+          outline: none;
+          cursor: pointer;
+          background: none;
+          color: #71B280;
+          position: relative;
+          letter-spacing: 1px;
+          border-radius: 25px;
+        }
+        .right_side {
+          width: 55%;
+          position: relative;
+        }
+        .right_side .video-div {
+          background-size: cover;
+          background-position: right center;
+          position: relative;
+          float: right;
+          width: 65%;
+          height: 62vh;
+        }
+
+        iframe {
+          border-style: none;
+          width: 100%;
+          height: 100%;
+        }
+
+        .right_side .video-div:after {
+          content: '';
+          width: 70%;
+          height: 92vh;
+          position: absolute;
+          z-index: -1;
+          left: 5%;
+          top: -122px;
+          background: #71B280;
+          background: -webkit-linear-gradient(to right top, #134E5E, #71B280);
+          background: linear-gradient(to right top, #134E5E, #71B280);
+        }
+        .right_side .video-div:before {
+          content: '';
+          position: absolute;
+          top: 260px;
+          left: -100px;
+          width: 50px;
+          height: 50px;
+          border-radius: 80px;
+          border: 40px solid #71B280;
+        }
+        .right_side:after {
+          content: '';
+          position: absolute;
+          top: -50px;
+          right: -55px;
+          z-index: -1;
+          width: 150px;
+          height: 150px;
+          background-image: radial-gradient(circle at 3px 3px, #134E5E 3px, transparent 0);
+          background-size: 20px 20px;
+        }
+        section {
+          display: flex;
+          margin: 150px 10%;
+        }
+        section .item {
+          -webkit-box-shadow: 5px 5px 20px -6px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 5px 5px 20px -6px rgba(0, 0, 0, 0.25);
+          box-shadow: 5px 5px 20px -6px rgba(0, 0, 0, 0.25);
+          margin-right: 25px;
+          padding: 40px 30px;
+          width: 40%;
+        }
+
+
+        section .item button {
+          padding: 20px;
+          border-radius: 40px;
+          font-size: 20px;
+          -webkit-box-shadow: 0px 0px 30px 0px #71B280;
+          -moz-box-shadow: 0px 0px 30px 0px #71B280;
+          box-shadow: 0px 0px 30px 0px #71B280;
+        }
+
+
+        section .item h5 {
+          font-weight: 700;
+          font-size: 15px;
+          position: relative;
+          margin-bottom: 50px;
+          color: #134E5E;
+        }
+        section .item h5::after {
+          content: '';
+          width: 60px;
+          height: 3px;
+          position: absolute;
+          left: 0;
+          bottom: -25px;
+          background: #134E5E;
+          background: -webkit-linear-gradient(to right top, #134E5E, #71B280);
+          background: linear-gradient(to right top, #134E5E, #71B280);
+        }
+        section .item p {
+          color: #878787;
+          line-height: 25px;
+        }
+        section .text_content {
+          margin-left: 30px;
+        }
+        section .text_content h2 {
+          font-weight: 700;
+          font-size: 35px;
+          color: #134E5E;
+        }
+        section .text_content p {
+          width: 80%;
+          color: #878787;
+          line-height: 25px;
+        }
+        section .text_content button {
+          padding: 10px;
+        }
+        section .text_content button:first-of-type {
+          padding: 15px 30px;
+          margin: 20px 10px 0 0;
+        }
+        section .text_content i {
+          font-size: 20px;
+          margin-left: 4px;
+          color: transparent;
+          -webkit-text-stroke-width: 1.8px;
+          -webkit-text-stroke-color: #134E5E;
+        }
+
+        .form {
+          background-color: #71B280;
+          height: 250px;
+          box-shadow: 10px 10px 80px  #134E5E inset;
+        }
+
+        #form {
+          display: inline-block;
+          margin: 6%;
+          margin-left: 34%;
+        }
+
+        #email {
+          padding: 13px 30px;
+          margin-right: 50px;
+          width: 300px;
+          border: 2px solid #134E5E;
+          outline: none;
+          cursor: pointer;
+          background: white;
+          color: #134E5E;
+          position: relative;
+          letter-spacing: 1px;
+          border-radius: 25px;
+        }
+
+        #submit {
+          padding: 15px 30px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          background: none;
+          font-weight: 500;
+          color: white;
+          position: relative;
+          background: #134E5E;
+          letter-spacing: 1px;
+          border-radius: 30px;
+        }
+
+        #email,
+        #submit {
+          border-radius: 40px;
+          -webkit-box-shadow: 0px 0px 30px 0px #134E5E;
+          -moz-box-shadow: 0px 0px 30px 0px #134E5E;
+          box-shadow: 0px 0px 30px 0px #134E5E;
+        }
+
+        footer {
+          background-color: #134E5E;
+          padding: 20px;
+          -webkit-box-shadow: 0px -12px 50px 18px rgba(19,78,94,1);
+          -moz-box-shadow: 0px -12px 50px 18px rgba(19,78,94,1);
+          box-shadow: 0px -12px 50px 18px rgba(19,78,94,1);
+        }
+
+        footer ul {
+          display: flex;
+          justify-content: center;
+        }
+
+        footer ul li {
+          padding: 0 10px;
+          list-style: none;
+          margin: 0 50px 10px 50px;
+        }
+
+        footer ul li a {
+          text-decoration: none;
+          color: #86d498;
+        }
+
+        footer span {
+          margin-top: 5px;
+          display: flex;
+          justify-content: center;
+          font-size: 0.9em;
+          color: #0a2930;
+        }
+
+        @media only screen and (max-width: 1000px) {
+          main {
+            flex-direction: column;
+          }
+          .left_side,
+          .right_side {
+            width: 100%;
+          }
+          .left_side .social {
+            margin: 20px 0 40px;
+          }
+          .right_side > div {
+            float: none;
+            margin: 0 auto;
+          }
+          .right_side:after {
+            right: 55px;
+          }
+          p.show_more {
+            margin-top: 65px;
+          }
+          .right_side div {
+            width: 90%;
+          }
+          .right_side div:after {
+            top: -12px;
+            height: 70vh;
+          }
+          section {
+            margin-top: 30px;
+            -webkit-flex-flow: row wrap;
+            justify-content: space-around;
+          }
+          section .item {
+            width: 35%;
+          }
+          section .text_content {
+            float: left;
+          }
+        }
+        @media only screen and (max-width: 1220px) {
+          section {
+            margin-top: 75px;
+            -webkit-flex-flow: row wrap;
+            justify-content: space-around;
+          }
+          section .item {
+            width: 35%;
+          }
+        }
+        @media only screen and (max-width: 725px) {
+          section .item {
+            width: 100%;
+          }
+        }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <img id="header-img" src="https://i.ibb.co/XxZs8hW/plane-landing.png" alt="logo">
+        landing page
+      </div>
+      <nav id="nav-bar">
+        <ul>
+            <li><a class="nav-link" href="#product">Product</a></li>
+            <li><a class="nav-link" href="#services">Services</a></li>
+            <li><a class="nav-link" href="#enroll">Enroll</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="page-top">
+    </div>
+    <main>
+      <div id="product" class="left_side">
+        <h1>The best solution for your business</h1>
+        <h4>Do you need the coolest and the most awesome platform to manage your project?! You have walked to the right place!</h4>
+        <button class="main_btn">Get Started</button>
+        <button class="outline_btn">Learn More</button>
+        <div class="social">
+          <button class="outline_btn">
+            <i class="fa"><img src="https://i.ibb.co/rwYdPpc/linkedin.png" height="12px" alt=""></i>
+          </button>
+          <button class="outline_btn">
+            <i class="fa"><img src="https://i.ibb.co/64r5bpF/facebook.png" height="12px" alt=""></i>
+          </button>
+          <button class="main_btn">
+            <i class="fa"><img src="https://i.ibb.co/KF4yhbT/twitter.png" height="14px" alt=""></i>
+          </button>
+        </div>
+      </div>
+      <div class="right_side">
+        <div class="video-div">
+          <iframe
+            id="video" src="https://www.youtube.com/embed/SxdB-OjEflg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </main>
+    <p class="show_more">See how we help great companies with their works <i class="fa fa-play-circle-o"></i></p>
+    <section id="services">
+      <div class="item">
+        <button class="main_btn"><i class="fa"><img src="https://i.ibb.co/PMQXvMg/extension.png" height="20px" alt=""></i></button>
+        <h5>easy to use</h5>
+        <p>Suspendisse in rhoncus mauris, non auctor nisi. Etiam tincidunt lorem eget orci tempus malesuada.</p>
+      </div>
+      <div class="item">
+        <button class="main_btn second"><i class="fa"><img src="https://i.ibb.co/jZ1Z38R/miscellaneous.png" height="20px" alt=""></i></button>
+        <h5>awesome support</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis dictum augue.</p>
+      </div>
+      <div class="text_content">
+        <h2>Why choose us!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis sapien ac arcu semper iaculis. Praesent eget ante quis. Duis dictum augue sit amet enim condimentum efficitur.</p>
+        <button class="outline_btn">Learn More</button>
+        <button class="outline_btn"><i class="fa"><img src="https://i.ibb.co/jJzZDRq/multimedia.png" height="15px" alt=""></i></button>
+      </div>
+    </section>
+    <div id="enroll" class="form">
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input name="email" id="email" type="email" placeholder="Enter your email address" required/>
+        <input id="submit" type="submit" value="Get Started" class="btn"/>
+      </form>
+    </div>
+    <footer>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <span>&copy; 2020, Nadiia K.</span>
+    </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+    </script>
+  </body>
+</html>
