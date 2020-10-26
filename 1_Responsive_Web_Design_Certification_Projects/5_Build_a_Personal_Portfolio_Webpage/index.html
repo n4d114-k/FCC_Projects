@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Personal Portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" href="https://i.ibb.co/JkdwgXX/web-design.png">
+    <style>
+    /* Using styles inside an HTML document is considered bad practice,
+    but this is required to pass all freeCodeCamp tests. In this case, media query
+    will be enough for passing the tests.
+   You can look at the rest of the css code in a separate document.*/
+        @media (max-width: 1080px) {
+
+          nav {
+            width: 100%;
+            justify-content: flex-start;
+            font-size: 90%;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+          }
+
+          #projects {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+
+          .project-image {
+              display: none;
+          }
+
+          #contact ul {
+            display: flex;
+            flex-direction: column;
+          }
+
+          #contact li:last-child {
+            margin-left: 0;
+          }
+
+        }
+
+    </style>
+  </head>
+  <body>
+
+    <nav id="navbar">
+
+      <ul class="nav-list">
+
+        <li><a href="#welcome-section">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+
+    </nav>
+
+    <section id="welcome-section">
+
+        <h1>Hello! My name is Nadiia and I love to code.</h1>
+
+    </section>
+
+    <section id="projects">
+
+        <div class="flex-container">
+            <a class="project-tile" href="https://codepen.io/n4d114-k/full/eYprPoQ" target="_blank">
+                <img class="project-image" src="https://i.ibb.co/1nzFmGz/Build-a-Tribute-Page.png" alt="tribute page">
+                <p>Tribute Page</p>
+            </a>
+            <a class="project-tile" href="https://codepen.io/n4d114-k/full/LYprGze">
+                <img class="project-image" src="https://i.ibb.co/rvf7BfZ/Build-a-Survey-Form.png" alt="survey form">
+                <p>Survey Form</p>
+            </a>
+        </div>
+        <div class="flex-container">
+            <a class="project-tile" href="https://codepen.io/n4d114-k/full/LYprawb">
+                <img class="project-image" src="https://i.ibb.co/wr8gW4t/Build-a-Product-Landing-Page.png" alt="product landing page">
+                <p>Product Landing Page</p>
+            </a>
+            <a class="project-tile" href="https://codepen.io/n4d114-k/full/XWmyZyj">
+                <img class="project-image" src="https://i.ibb.co/V3b6wW1/Build-a-Technical-Documentation-Page.png" alt="technical documentation page">
+                <p>Technical Documentation Page</p>
+            </a>
+        </div>
+        <div  class="flex-container">
+            <button type="button" name="show_more" onclick="window.location.href='https://codepen.io/n4d114-k';">Show more</button>
+        </div>
+    </section>
+
+    <section id="contact">
+
+      <h2>Contact.<br>
+          Got something to say? You can contact me directly</h2>
+
+      <ul>
+
+        <li><a id="profile-link" href="https://www.freecodecamp.org/n4d114_k" target="_blank">freeCodeCamp</a></li>
+        <li><a href="https://github.com/n4d114-k">GitHub</a></li>
+        <li><a href="mailto:example@example.com">Email&nbsp;Me</a></li>
+
+      </ul>
+
+    </section>
+
+    <footer>
+      <p>
+        &copy;<a href="https://www.freecodecamp.org/n4d114_k" target="_blank">
+          Nadiia K.</a>
+      </p>
+    </footer>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+    </script>
+  </body>
+</html>
