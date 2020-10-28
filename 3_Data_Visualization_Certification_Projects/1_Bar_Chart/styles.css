@@ -1,0 +1,79 @@
+:root {
+  --green: #44fc8c;
+  --black: #242d28;
+  --taupegray: #86968D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lucida Console", Monaco, monospace;
+  background: var(--black);
+}
+
+.main .container {
+  height: 560px;
+  width: 900px;
+  background: var(--taupegray);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 20px 20px;
+  align-self: center;
+  position: relative;
+}
+
+.main .container #title {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.main .container .visHolder {
+  position: absolute;
+  top: 6em;
+}
+
+#tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  font: 12px;
+  background: var(--black);
+  color: var(--taupegray);
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  background: var(--taupegray);
+  pointer-events: none;
+}
+
+#y-axis path {
+  stroke: var(--black);
+  stroke-width: 1;
+  fill: none;
+}
+
+#x-axis path {
+  stroke: var(--black);
+  stroke-width: 1;
+  fill: none;
+}
+
+.info {
+  font-size: 0.5em;
+}
