@@ -1,0 +1,44 @@
+:root {
+  --green: #44fc8c;
+  --black: #242d28;
+  --taupegray: #86968D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+body {
+  background-color: var(--black);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+h1 {
+  margin-left: 1.3em;
+}
+
+h1,
+h2 {
+  color: var(--green);
+}
+
+.title-container {
+  margin: 20px 0;
+}
+
+div.tooltip {
+  width: 150px;
+  padding: 10px;
+  font-size: 12px;
+  background: var(--black);
+  color: var(--taupegray);
+  border: none;
+  border-radius: 5px;
+  pointer-events: none;
+}
