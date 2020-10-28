@@ -1,0 +1,86 @@
+:root {
+  --green: #44fc8c;
+  --black: #242d28;
+  --taupegray: #86968D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+body {
+    background-image: linear-gradient(260deg, #3c1d3a 0%, #1b262c 100%);
+    padding: 1rem;
+    width: 100vw;
+    height: 100vh;
+		background: var(--black);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    color: var(--green);
+    font-size: 1.5rem;
+}
+
+#wrapper {
+    margin: 3rem auto;
+    border-radius: 5px;
+    position: relative;
+}
+
+svg {
+    background-color: var(--taupegray);
+    border-radius: 5px;
+    color: var(--black);
+}
+
+svg rect.cell:hover {
+    stroke: var(--green);
+    stroke-width: 1px;
+    opacity: 0.9;
+}
+
+#tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    background: var(--black);
+    color: var(--taupegray);
+    text-align: center;
+    font-size: .9rem;
+    padding: 1rem;
+    border-radius: 5px;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+#tooltip::before {
+    content: "▼";
+    position: absolute;
+    bottom: -15px;
+    color:rgba(28, 28, 28,.7);
+}
+
+#legend {
+    font-size: 0.8rem;
+		color: var(--black);
+}
+
+#legend .rect {
+    stroke: var(--black);
+}
