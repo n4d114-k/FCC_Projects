@@ -1,0 +1,69 @@
+:root {
+  --green: #44fc8c;
+  --black: #242d28;
+  --taupegray: #86968D;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: var(--black);
+  color: var(--taupegray);
+}
+
+#main {
+  width: 1000px;
+  display: flex;
+  padding-top: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.states {
+  fill: none;
+  stroke: var(--black);
+  stroke-linejoin: round;
+}
+
+div.tooltip {
+  position: absolute;
+  padding: 10px;
+  font-size: 12px;
+  background: var(--black);
+  color: var(--taupegray);
+  border: 0px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+#title {
+  font-size: 3.5rem;
+}
+
+#description {
+  text-align: center;
+}
+
+#source {
+  align-self: flex-end;
+  margin-top: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--green);
+}
+
+.tick {
+  stroke: var(--taupegray);
+}
+
+.tick line {
+  stroke: var(--black);
+}
