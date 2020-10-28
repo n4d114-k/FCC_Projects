@@ -1,0 +1,41 @@
+:root {
+  --black: #242d28;
+  --taupegray: #9db0a5;
+}
+
+body {
+  font-family: "Lucida Console", Monaco, monospace;
+  color: var(--black);
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: var(--black);
+}
+
+svg {
+  margin: 3em;
+  padding: 3em 0;
+}
+
+.graph {
+  display: block;
+  background: var(--taupegray);
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: var(--black);
+  shape-rendering: crispEdges;
+}
+
+div.tooltip {
+  position: absolute;
+  padding: 10px;
+  font-size: 0.8em;
+  background: var(--black);
+  color: var(--taupegray);
+  border: 0px;
+  border-radius: 5px;
+  pointer-events: none;
+}
