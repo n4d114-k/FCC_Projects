@@ -1,0 +1,87 @@
+:root {
+  --orange: #a62c06;
+  --black: #2b2b2b;
+  --taupegray: #86968d;
+  --blue: #09669d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+body {
+  background: var(--black);
+
+}
+.container {
+  max-width: 680px;
+  min-height: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#quote-box {
+  width: 70%;
+  height: 40%;
+  background: var(--taupegray);
+  color: var(--black);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#text {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+#author {
+  text-align: right;
+  margin-bottom: 1.5rem;
+}
+
+#quote-box button {
+  position: relative;
+  padding: 10px;
+  font-size: 0.9rem;
+  border: 1px solid var(--orange);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--orange);
+  outline: 0;
+}
+
+#quote-box button:hover {
+  background: var(--orange);
+  color: var(--black);
+  cursor: pointer;
+}
+
+#quote-box button:active {
+  top: 2px;
+}
+
+#quote-box a {
+  padding: 10px;
+  font-size: 0.9rem;
+  display: block;
+  text-decoration: none;
+  width: 1rem;
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  color: var(--blue);
+}
+
+#quote-box a:hover {
+  background: var(--blue);
+  color: var(--black);
+  cursor: pointer;
+}
