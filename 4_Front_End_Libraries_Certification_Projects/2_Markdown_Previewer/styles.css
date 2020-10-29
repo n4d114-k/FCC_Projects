@@ -1,0 +1,43 @@
+:root {
+  --pastelgray: #c9d1c9;
+  --black: #292d34;
+  --green: #90b061;
+  --scrollbar-black: #1c1f24;
+}
+
+* {
+
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+body {
+  background: var(--scrollbar-black);
+}
+
+#editor {
+  padding: 2rem;
+  background: var(--black);
+  color: var(--pastelgray);
+  width: 100%;
+  height: 40vh;
+  outline: 0;
+}
+
+#preview {
+  background: var(--black);
+  color: var(--pastelgray);
+  padding: 3rem;
+
+}
+
+#preview code {
+  color: var(--green);
+}
+
+::-webkit-Scrollbar{
+  width: 8px;
+	background: var(--scrollbar-black);
+}
+::-webkit-Scrollbar-thumb{
+	background: var(--pastelgray);
+}
