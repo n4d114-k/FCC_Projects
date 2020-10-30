@@ -1,0 +1,63 @@
+:root {
+  --green: #4e9c4e;
+  --black: #2b2b2b;
+}
+
+body {
+  font-family: "Lucida Console", Monaco, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#drum-machine {
+  padding: 8rem;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  background: var(--black);
+}
+
+.drum-pad {
+  width: 15vw;
+  height: 15vh;
+  text-align: center;
+  font-size: 5vw;
+  background: var(--green);
+  color: var(--black);
+  font-family: inherit;
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+#keyboard {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw;
+  justify-items: center;
+  align-items: center;
+}
+
+.screen-container {
+  margin: 0 0 20px 0;
+  position: relative;
+  border-radius: 5px;
+}
+
+.screen {
+  padding: 10px;
+  width: 100%;
+  min-width: 200px;
+  height: 2em;
+  box-sizing: border-box;
+  display: block;
+  border: 0;
+  border-radius: 5px;
+  text-align: right;
+  font-size: 5vw;
+  letter-spacing: -2px;
+  background: #44443a;
+}
