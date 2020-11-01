@@ -1,0 +1,68 @@
+:root {
+  --green: #4e9c4e;
+  --black: #2b2b2b;
+  --red: #c36262;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+	box-sizing: border-box;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+body {
+  background: var(--black);
+  color: var(--green);
+}
+
+#root {
+	min-height: 100vh;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
+
+#clock {
+	min-width: 600px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+#timer {
+	border: 3px dotted var(--red);
+	border-radius: 25px;
+	width: 200px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#timer time {
+	font-size: 3em;
+}
+
+.setter-container {
+	padding: 10px;
+	display: flex;
+}
+
+.setter {
+	padding: 10px;
+	text-align: center;
+}
+
+.setter i, .setter span {
+	padding: 10px;
+}
+
+.setter span {
+	font-size: 4em;
+}
+
+.timerButton-container > i {
+	padding: 30px;
+}
