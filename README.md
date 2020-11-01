@@ -4,6 +4,13 @@ My freeCodeCamp [profile](https://www.freecodecamp.org/n4d114-k)
 
 ***
 
+### [Front End Libraries Projects](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/)
+[codepen.io collection](https://codepen.io/collection/XLgoBq "My solution on codepen.io")
+
+[![Front End Libraries Certification](0_Certificates/FCC_Certificate_Front_End_Libraries.png)](https://www.freecodecamp.org/certification/n4d114-k/front-end-libraries)
+
+***
+
 ### [Data Visualization Projects](https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/)
 [codepen.io collection](https://codepen.io/collection/AzmQJW "My solution on codepen.io")
 
