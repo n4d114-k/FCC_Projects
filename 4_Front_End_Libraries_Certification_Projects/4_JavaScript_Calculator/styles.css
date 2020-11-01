@@ -1,0 +1,103 @@
+:root {
+  --green: #4e9c4e;
+  --green-hover: #4e9c4e50;
+  --black: #2b2b2b;
+  --red: #c36262;
+  --red-hover: #c3626250;
+  --yellow: #c38e62;
+  --yellow-hover: #c38e6250;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--black);
+  height: 100vh;
+}
+
+#display {
+  background-color: #000;
+  grid-column: 1 / span 4;
+  height: 5rem;
+  text-align: right;
+  padding-right: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: #fff;
+  font-size: 2.5rem;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+#inputWrapper {
+  grid-column: 1 / span 4;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 0;
+}
+
+
+button {
+  color: var(--black);
+  border: 1px solid var(--black);
+  font-size: 3rem;
+  outline: 0;
+}
+
+.number {
+  background: var(--yellow);
+  border-radius: 20px;
+}
+
+.number:hover {
+  background: var(--yellow-hover);
+  cursor: pointer;
+}
+
+.all-clear,
+.negative,
+.delete {
+  background: var(--red);
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.all-clear:hover,
+.negative:hover,
+.delete:hover {
+  background: var(--red-hover);
+  cursor: pointer;
+}
+
+#divide,
+#multiply,
+#subtract,
+#add,
+#equals {
+  background: var(--green);
+  border-radius: 20px;
+}
+
+#divide:hover,
+#multiply:hover,
+#subtract:hover,
+#add:hover,
+#equals:hover {
+  background: var(--green-hover);
+  cursor: pointer;
+}
+
+.span-two {
+  grid-column: span 2;
+}
